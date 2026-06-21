@@ -1,0 +1,119 @@
+﻿@model TempleERP.Models.PoojaMaster
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PoojaMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PoojaName" class="control-label"></label>
+                <input asp-for="PoojaName" class="form-control" />
+                <span asp-validation-for="PoojaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MalayalamName" class="control-label"></label>
+                <input asp-for="MalayalamName" class="form-control" />
+                <span asp-validation-for="MalayalamName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PoojaCode" class="control-label"></label>
+                <input asp-for="PoojaCode" class="form-control" />
+                <span asp-validation-for="PoojaCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalAmount" class="control-label"></label>
+                <input asp-for="TotalAmount" class="form-control" />
+                <span asp-validation-for="TotalAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductCost" class="control-label"></label>
+                <input asp-for="ProductCost" class="form-control" />
+                <span asp-validation-for="ProductCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriestDonation" class="control-label"></label>
+                <input asp-for="PriestDonation" class="form-control" />
+                <span asp-validation-for="PriestDonation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxNos" class="control-label"></label>
+                <input asp-for="MaxNos" class="form-control" />
+                <span asp-validation-for="MaxNos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsSingle" /> @Html.DisplayNameFor(model => model.IsSingle)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PrintReceiptSeparate" /> @Html.DisplayNameFor(model => model.PrintReceiptSeparate)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="EditablePoojaName" class="control-label"></label>
+                <input asp-for="EditablePoojaName" class="form-control" />
+                <span asp-validation-for="EditablePoojaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountHead" class="control-label"></label>
+                <input asp-for="AccountHead" class="form-control" />
+                <span asp-validation-for="AccountHead" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrintCategory" class="control-label"></label>
+                <input asp-for="PrintCategory" class="form-control" />
+                <span asp-validation-for="PrintCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsRateEditable" /> @Html.DisplayNameFor(model => model.IsRateEditable)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsCoupon" /> @Html.DisplayNameFor(model => model.IsCoupon)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsOnlyQty" /> @Html.DisplayNameFor(model => model.IsOnlyQty)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="SmsRequired" /> @Html.DisplayNameFor(model => model.SmsRequired)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,143 @@
+﻿@model IEnumerable<TempleERP.Models.PoojaMaster>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PoojaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MalayalamName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoojaCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriestDonation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxNos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsSingle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrintReceiptSeparate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EditablePoojaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountHead)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrintCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsRateEditable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCoupon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsOnlyQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmsRequired)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoojaName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MalayalamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoojaCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriestDonation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxNos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSingle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrintReceiptSeparate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EditablePoojaName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountHead)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrintCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRateEditable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCoupon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsOnlyQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SmsRequired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PoojaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PoojaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PoojaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
